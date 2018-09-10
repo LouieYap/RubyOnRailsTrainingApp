@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: postgres
+  database: RubyOnRails
   username: postgres
   password: ' '
 
