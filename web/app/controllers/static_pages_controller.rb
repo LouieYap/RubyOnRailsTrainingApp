@@ -4,4 +4,6 @@ class StaticPagesController < ApplicationController
 
   def help
   end
+
+  before_action :check_login_session, :only => [:home, :help]
 end
