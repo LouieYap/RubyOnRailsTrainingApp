@@ -31,4 +31,10 @@ class Register
   end
   def username=(username)
   end
+  def password
+    @password
+  end
+  def password=(password)
+    @password = password
+  end
 end
