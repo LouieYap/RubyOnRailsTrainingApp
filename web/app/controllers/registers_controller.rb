@@ -35,14 +35,6 @@ class RegistersController < ApplicationController
 
     respond_to do |format|
       if person.id?
-        register = Register.new
-        register.firstname = person.firstname
-        register.lastname = person.lastname
-        register.middlename = person.middlename
-        register.age = person.age
-        register.username = user.username
-        register.password = ''
-
         format.html { redirect_to registers_path, notice: 'Register was successfully created.' }
         format.json { render :show, status: :created, location: @person }
       else
