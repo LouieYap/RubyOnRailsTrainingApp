@@ -1,8 +1,9 @@
 class LoginController < ApplicationController
   layout false
+
   def new
-    salt= Digest::SHA1.hexdigest("louieMagenic")
-    encrypted_password= Digest::SHA1.hexdigest("#{salt}hans")
+    service = EncryptPasswordService.new
+    encrypted_password= service.encrypt("louie", "hans")
     @user = User.new(:password => encrypted_password, :username => 'louie', :person => Person.new)
     @user.save
   end
@@ -22,8 +23,8 @@ class LoginController < ApplicationController
   end
 
   def authenticate(username, password)
-    salt= Digest::SHA1.hexdigest("#{username}Magenic")
-    encrypted_password= Digest::SHA1.hexdigest("#{salt}#{password}")
+    service = EncryptPasswordService.new
+    encrypted_password= service.encrypt(username, password)
     User.find_by(username: username, password: encrypted_password)
 
   end
