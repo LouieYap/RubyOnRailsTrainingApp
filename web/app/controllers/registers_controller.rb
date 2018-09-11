@@ -14,9 +14,11 @@ class RegistersController < ApplicationController
 
   def create
 
+    encryptor = EncryptPasswordService.new
+
     user = User.new
     user.username = register_params['username']
-    user.password = register_params['password']
+    user.password= encryptor.encrypt(user.username, register_params['password'])
 
     person = Person.new
     person.user = user
