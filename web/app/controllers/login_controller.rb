@@ -2,10 +2,6 @@ class LoginController < ApplicationController
   layout false
 
   def new
-    service = EncryptPasswordService.new
-    encrypted_password= service.encrypt("louie", "hans")
-    @user = User.new(:password => encrypted_password, :username => 'louie', :person => Person.new)
-    @user.save
   end
 
   def create
