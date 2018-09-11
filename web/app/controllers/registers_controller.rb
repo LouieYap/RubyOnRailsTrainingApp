@@ -1,4 +1,5 @@
 class RegistersController < ApplicationController
+  layout false
   #before_action :set_register, only: [:show, :edit, :update, :destroy]
 
   # GET /registers
@@ -18,7 +19,7 @@ class RegistersController < ApplicationController
 
     user = User.new
     user.username = register_params['username']
-    user.password= encryptor.encrypt(user.username, register_params['password'])
+    user.password = encryptor.encrypt(user.username, register_params['password'])
 
     person = Person.new
     person.user = user
