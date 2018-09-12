@@ -5,8 +5,8 @@ class CreateRegisters < ActiveRecord::Migration[5.2]
       t.string :lastname
       t.string :middlename
       t.string :age
-      t.string :integer
       t.string :username
+      t.string :password
 
       t.timestamps
     end

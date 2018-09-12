@@ -1,5 +1,6 @@
 class RegistersController < ApplicationController
   layout false
+  include HTTParty
   #before_action :set_register, only: [:show, :edit, :update, :destroy]
 
   # GET /registers
@@ -17,25 +18,21 @@ class RegistersController < ApplicationController
 
     encryptor = EncryptPasswordService.new
 
-    user = User.new
-    user.username = register_params['username']
-    user.password = encryptor.encrypt(user.username, register_params['password'])
+    response = self.class.post('http://localhost:3001/registers',
+                      :body => {
+                          :username => register_params['username'],
+                          :password => encryptor.encrypt(register_params['username'], register_params['password']),
+                          :firstname => register_params['firstname'],
+                          :lastname => register_params['lastname'],
+                          :middlename => register_params['middlename'],
+                          :age => register_params['age']
+                      }.to_json,
+                      :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'} )
 
-    person = Person.new
-    person.user = user
-    person.firstname = register_params['firstname']
-    person.lastname = register_params['lastname']
-    person.middlename = register_params['middlename']
-    person.age = register_params['age']
 
-    Person.transaction do
-      user.save!
-      person.user_id = user.id
-      person.save!
-    end
 
     respond_to do |format|
-      if person.id?
+      if response.response.code == '201'
         format.html { redirect_to registers_path, notice: 'Register was successfully created.' }
         format.json { render :show, status: :created, location: @person }
       else
