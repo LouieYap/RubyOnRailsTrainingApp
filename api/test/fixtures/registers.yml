@@ -5,13 +5,13 @@ one:
   lastname: MyString
   middlename: MyString
   age: MyString
-  integer: MyString
   username: MyString
+  password: MyString
 
 two:
   firstname: MyString
   lastname: MyString
   middlename: MyString
   age: MyString
-  integer: MyString
   username: MyString
+  password: MyString

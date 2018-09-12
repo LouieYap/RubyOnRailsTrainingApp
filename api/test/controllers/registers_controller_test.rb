@@ -12,7 +12,7 @@ class RegistersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create register" do
     assert_difference('Register.count') do
-      post registers_url, params: { register: { age: @register.age, firstname: @register.firstname, integer: @register.integer, lastname: @register.lastname, middlename: @register.middlename, username: @register.username } }, as: :json
+      post registers_url, params: { register: { age: @register.age, firstname: @register.firstname, lastname: @register.lastname, middlename: @register.middlename, password: @register.password, username: @register.username } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class RegistersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update register" do
-    patch register_url(@register), params: { register: { age: @register.age, firstname: @register.firstname, integer: @register.integer, lastname: @register.lastname, middlename: @register.middlename, username: @register.username } }, as: :json
+    patch register_url(@register), params: { register: { age: @register.age, firstname: @register.firstname, lastname: @register.lastname, middlename: @register.middlename, password: @register.password, username: @register.username } }, as: :json
     assert_response 200
   end
 
