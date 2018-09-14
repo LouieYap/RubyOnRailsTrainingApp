@@ -15,17 +15,6 @@ ActiveRecord::Schema.define(version: 2018_09_12_101426) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "controllers", force: :cascade do |t|
-    t.string "login"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "logins", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "people", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
@@ -33,17 +22,6 @@ ActiveRecord::Schema.define(version: 2018_09_12_101426) do
     t.string "age"
     t.string "integer"
     t.string "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "registers", force: :cascade do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.string "middlename"
-    t.string "age"
-    t.string "username"
-    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
