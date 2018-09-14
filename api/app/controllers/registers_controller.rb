@@ -1,6 +1,5 @@
 class RegistersController < ApplicationController
   #before_action :set_register, only: [:show, :update, :destroy]
-  include ActionController::HttpAuthentication::Token::ControllerMethods
 
   # POST /registers
   def create

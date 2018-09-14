@@ -1,4 +1,4 @@
-class PeopleController < ApplicationController
+class PeopleController < SecuredController
   before_action :set_person, only: [:show, :update, :destroy]
 
   # GET /people
