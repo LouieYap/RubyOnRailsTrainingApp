@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :people
   get    '/login',   to: 'login#new'
   root 'login#new'
   post   '/login',   to: 'login#create'
