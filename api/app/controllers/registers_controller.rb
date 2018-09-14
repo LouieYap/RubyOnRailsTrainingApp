@@ -1,21 +1,10 @@
 class RegistersController < ApplicationController
-  before_action :set_register, only: [:show, :update, :destroy]
+  #before_action :set_register, only: [:show, :update, :destroy]
 
-  # GET /registers
-  def index
-    @registers = Register.all
-
-    render json: @registers
-  end
-
-  # GET /registers/1
-  def show
-    render json: @register
-  end
 
   # POST /registers
   def create
-    @register = Register.new(register_params)
+
     user = User.new
     user.username = register_params['username']
     user.password = register_params['password']
@@ -38,20 +27,6 @@ class RegistersController < ApplicationController
     else
       render json: @register.errors, status: :unprocessable_entity
     end
-  end
-
-  # PATCH/PUT /registers/1
-  def update
-    if @register.update(register_params)
-      render json: @register
-    else
-      render json: @register.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /registers/1
-  def destroy
-    @register.destroy
   end
 
   private

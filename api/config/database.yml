@@ -23,9 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: test1
-  username: postgres
-  password: ' '
+  database: RubyOnRails
+  username: rubyuser
+  password: password1
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
