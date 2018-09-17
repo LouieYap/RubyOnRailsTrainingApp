@@ -1,30 +1,31 @@
 class LoginController < ApplicationController
   layout false
+  include HTTParty
 
   def new
   end
 
   def create
-
-    @user =  authenticate(params[:login][:username],params[:login][:password])
-
-    if @user
-    session[:user_id] = @user.id
-    redirect_to home_path
-    else
-      flash[:danger] = 'Invalid username/password combination'
-    redirect_to login_path
-  end
-
-  end
-
-  def authenticate(username, password)
     service = EncryptPasswordService.new
-    encrypted_password= service.encrypt(username, password)
-    User.find_by(username: username, password: encrypted_password)
+    encrypted_password = service.encrypt(params[:login][:username], params[:login][:password])
+    response = self.class.post('http://localhost:3001/authenticate',
+                               :body => {
+                                   :username => params[:login][:username],
+                                   :password => encrypted_password
+                               }.to_json,
+                               :headers => {'Content-Type' => 'application/json', 'Accept' => 'application/json'})
 
-  end
 
+      if response.response.code == '200'
+        body =  JSON.parse(response.response.body)
+        session[:user_id] = body['id']
+        session[:token] = body['token']
+        redirect_to home_path
 
+      else
+        flash[:danger] = 'Invalid username/password combination'
+        redirect_to login_path
+      end
 
+    end
   end
