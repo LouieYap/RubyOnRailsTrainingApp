@@ -18,6 +18,29 @@ class RegistersController < ApplicationController
 
     encryptor = EncryptPasswordService.new
 
+    response = RegistrationService.new({
+                                           firstname:register_params['firstname'],
+                                           lastname:register_params['lastname'],
+                                           middlename:register_params['middlename'],
+                                           username:register_params['username'],
+                                           age:register_params['age'],
+                                       }).register
+
+    respond_to do |format|
+      if response.response.code == '201'
+        format.html { redirect_to registers_path, notice: 'Register was successfully created.' }
+        format.json { render :show, status: :created, location: @person }
+      else
+        format.html { render :new }
+        format.json { render json: @person.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def create3
+
+    encryptor = EncryptPasswordService.new
+
     response = self.class.post('http://localhost:3001/registers',
                       :body => {
                           :username => register_params['username'],
