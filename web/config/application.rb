@@ -16,6 +16,6 @@ module Web
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     #
-    config.api_url = "http://localhost:3001"
+    config.x.api.url = "http://localhost:3001"
   end
 end
