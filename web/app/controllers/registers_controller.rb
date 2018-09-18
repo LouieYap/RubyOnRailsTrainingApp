@@ -21,6 +21,7 @@ class RegistersController < ApplicationController
                                            lastname:register_params['lastname'],
                                            middlename:register_params['middlename'],
                                            username:register_params['username'],
+                                           password:register_params['password'],
                                            age:register_params['age'],
                                        }).register
 
