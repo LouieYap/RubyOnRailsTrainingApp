@@ -14,7 +14,9 @@ class RegistrationService
   def register
     encryptor = EncryptPasswordService.new
 
-    return response = self.class.post('http://localhost:3001/registers',
+    url = Rails.configuration.api_url + '/registers'
+
+    return response = self.class.post(url,
                                :body => {
                                    :username => @username,
                                    :password => encryptor.encrypt(@username, @password),

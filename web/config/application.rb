@@ -15,5 +15,7 @@ module Web
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    #
+    config.api_url = "http://localhost:3001"
   end
 end
