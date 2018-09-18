@@ -16,8 +16,6 @@ class RegistersController < ApplicationController
 
   def create
 
-    encryptor = EncryptPasswordService.new
-
     response = RegistrationService.new({
                                            firstname:register_params['firstname'],
                                            lastname:register_params['lastname'],
