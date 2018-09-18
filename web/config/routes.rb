@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :registers
   get '/home', to: 'static_pages#home'
   get '/help', to: 'static_pages#help'
+  get '/form', to: 'static_pages#form'
+  post '/form', to: 'static_pages#form_submit'
   get '/logout', to: 'static_pages#logout'
 
 
