@@ -1,0 +1,29 @@
+<h1>Apply Page</h1>
+
+<% flash.each do |key, value| %>
+  <h2><%= value %></font></h2>
+<% end %>
+<%= form_for(form_path) do |f| %>
+  <div class="form-group">
+    <%= f.label :full_name %>
+    <%= f.text_field :full_name %>
+
+    <%= f.label :email_address %>
+    <%= f.text_field :email_address %>
+
+    <%= f.label :gender %>
+    <%= f.label :gender, "Male", :value => "true"  %>
+    <%= f.radio_button :gender, true %>
+    <%= f.label :gender, "Female", :value => "false" %>
+    <%= f.radio_button :gender, false %>
+
+    <%= f.label :blood_type %>
+    <%= f.select :blood_type, ['A' ,'B', 'AB', 'O'], {}, prompt: 'Select One' %>
+     <br>
+     <br>
+     <%= f.submit "Apply", class: "btn btn-primary" %>
+    </div>
+
+
+
+<% end %>

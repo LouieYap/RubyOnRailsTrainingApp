@@ -3,6 +3,10 @@
   <nav>
     <ul>
       <li><%= link_to "Help",   "#{help_path}"%></li>
+      <li><%= link_to "Apply",   "#{form_path}"%></li>
+      <li>
+        <%= link_to 'logout', :controller => :static_pages, action: :logout %>
+      </li>
     </ul>
   </nav>
 </div>
