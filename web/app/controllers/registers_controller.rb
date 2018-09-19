@@ -27,7 +27,8 @@ class RegistersController < ApplicationController
 
     respond_to do |format|
       if response.response.code == '201'
-        format.html { redirect_to registers_path, notice: 'Register was successfully created.' }
+        flash[:notice] ='Register was successfully created.'
+        format.html { redirect_to registers_path }
         format.json { render :show, status: :created, location: @person }
       else
         format.html { render :new }

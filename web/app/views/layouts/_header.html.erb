@@ -1,12 +1,10 @@
-<div class="container", style="background: darkgrey">
-  <h1 >Ruby on Rails Tutorial</h1>
-  <nav>
-    <ul>
-      <li><%= link_to "Help",   "#{help_path}"%></li>
-      <li><%= link_to "Apply",   "#{form_path}"%></li>
-      <li>
+<h1>Ruby on Rails Tutorial</h1>
+<nav class="navbar navbar-light" style="background-color: #d9d9d9;">
+
+  <span class="navbar-brand"><%= link_to "Help", "#{help_path}" %></span>
+  <span class="navbar-brand"><%= link_to "Apply", "#{form_path}" %></span>
+  <span class="navbar-brand">
         <%= link_to 'logout', :controller => :static_pages, action: :logout %>
-      </li>
-    </ul>
-  </nav>
-</div>
+  </span>
+
+</nav>

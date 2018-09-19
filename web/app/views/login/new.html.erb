@@ -1,18 +1,36 @@
-<h1>Log in</h1>
-<% flash.each do |key, value| %>
-  <span style="background: #cc0000"><%= value %></span>
-<% end %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<div class="container">
+
+
+  <div class="page-header"><h1>Log in</h1></div>
+  <% flash.each do |key, message| %>
+    <div class="alert alert-<%= key %>">
+      <%= message %>
+    </div>
+  <% end %>
 
   <div>
     <%= form_for(:login, url: login_path) do |f| %>
-
-      <%= f.label :username %>
-      <%= f.text_field :username, class: 'form-control' %>
-      <br>
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-      <br>
+      <div class="form-group row">
+        <div class="col-md-3">
+          <%= f.label :username %>
+          <%= f.text_field :username, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-3">
+          <p>
+            <%= f.label :password %>
+            <%= f.password_field :password, class: "form-control" %>
+        </div>
+      </div>
       <%= f.submit "Log in", class: "btn btn-primary" %>
+
+
     <% end %>
+
+  </div>
 
 </div>
