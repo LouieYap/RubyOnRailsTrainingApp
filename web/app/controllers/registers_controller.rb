@@ -1,5 +1,5 @@
 class RegistersController < ApplicationController
-  layout false
+  #layout false
   include HTTParty
   #before_action :set_register, only: [:show, :edit, :update, :destroy]
 
