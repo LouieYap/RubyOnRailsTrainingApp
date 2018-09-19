@@ -1,5 +1,5 @@
 class LoginController < ApplicationController
-  layout false
+  #layout false
   include HTTParty
 
   def new

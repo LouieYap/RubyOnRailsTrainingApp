@@ -1,10 +1,14 @@
 <h1>Ruby on Rails Tutorial</h1>
 <nav class="navbar navbar-light" style="background-color: #d9d9d9;">
 
-  <span class="navbar-brand"><%= link_to "Help", "#{help_path}" %></span>
-  <span class="navbar-brand"><%= link_to "Apply", "#{form_path}" %></span>
-  <span class="navbar-brand">
+  <% if session[:user_id].nil? %>
+    <span class="navbar-brand"><%= link_to "Register", "#{registers_path}" %></span>
+
+    <%else %>
+    <span class="navbar-brand"><%= link_to "Help", "#{help_path}" %></span>
+    <span class="navbar-brand"><%= link_to "Apply", "#{form_path}" %></span>
+    <span class="navbar-brand">
         <%= link_to 'logout', :controller => :static_pages, action: :logout %>
   </span>
-
+  <% end %>
 </nav>
