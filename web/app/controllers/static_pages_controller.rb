@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
                                }.to_json,
                                :headers => {'Content-Type' => 'application/json', 'Accept' => 'application/json', 'Authorization' => "Bearer " + "#{session[:token]}"})
     if response.response.code == '200'
-      flash[:message] = 'Successfully submitted form'
+      flash[:notice] = 'Successfully submitted form'
     else
       flash[:danger] = 'Error Occurred'
 
