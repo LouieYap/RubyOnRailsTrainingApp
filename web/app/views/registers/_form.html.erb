@@ -4,44 +4,57 @@
       <h2><%= pluralize(register.errors.count, "error") %> prohibited this register from being saved:</h2>
 
       <ul>
-      <% register.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% register.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :firstname %>
-    <%= form.text_area :firstname %>
+  <div class="form-group row">
+    <div class="col-md-4">
+      <%= form.label :firstname %>
+      <%= form.text_field :firstname, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :lastname %>
-    <%= form.text_area :lastname %>
+  <div class="form-group row">
+    <div class="col-md-4">
+      <%= form.label :lastname %>
+      <%= form.text_field :lastname, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :middlename %>
-    <%= form.text_area :middlename %>
+  <div class="form-group row">
+    <div class="col-md-4">
+      <%= form.label :middlename %>
+      <%= form.text_field :middlename, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
+  <div class="form-group row">
+    <div class="col-md-4">
+      <%= form.label :age %>
+      <%= form.number_field :age, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_area :username %>
+
+  <div class="form-group row">
+    <div class="col-md-4">
+      <%= form.label :username %>
+      <%= form.text_field :username, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+  <div class="form-group row">
+    <div class="col-md-4">
+      <%= form.label :password %>
+      <%= form.password_field :password, class: 'form-control' %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
