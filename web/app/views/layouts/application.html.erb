@@ -12,8 +12,19 @@
   <body>
 
   <div class="container">
-    <%= render 'layouts/header' %>
-    <%= yield %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= render 'layouts/header' %>
+      </div>
+      <div class="panel-body">
+        <%= yield %>
+      </div>
+      <div class="panel-footer">
+        <%= render 'layouts/footer' %>
+      </div>
+    </div>
+
+
   </div>
 
   </body>

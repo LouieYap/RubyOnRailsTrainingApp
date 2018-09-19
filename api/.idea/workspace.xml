@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="358f1186-ea5f-4664-a7ad-758db1ea0b37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../web/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../web/.idea/web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/controllers/login_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/controllers/login_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/app/controllers/registers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/controllers/registers_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/app/views/layouts/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/layouts/_header.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/views/registers/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/registers/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -209,10 +208,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="1592" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
