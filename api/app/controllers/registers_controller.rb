@@ -36,6 +36,6 @@ class RegistersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def register_params
-      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :username, :password)
+      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :username, :password, :countryId, :stateId)
     end
 end
