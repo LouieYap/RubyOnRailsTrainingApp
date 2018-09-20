@@ -26,6 +26,12 @@ class Register
   def age
   end
   def age=(age)
+    @age = age
+  end
+  def country
+  end
+  def country=(country)
+    @country = country
   end
   def username
   end

@@ -7,6 +7,7 @@ class RegistersController < ApplicationController
   # GET /registers.json
   def index
     @register = Register.new
+    @countries = RegistrationService.new.getCountries
   end
 
   # GET /registers/1
@@ -16,14 +17,14 @@ class RegistersController < ApplicationController
 
   def create
 
-    response = RegistrationService.new({
+    response = RegistrationService.new.register({
                                            firstname:register_params['firstname'],
                                            lastname:register_params['lastname'],
                                            middlename:register_params['middlename'],
                                            username:register_params['username'],
                                            password:register_params['password'],
                                            age:register_params['age'],
-                                       }).register
+                                       })
 
     respond_to do |format|
       if response.response.code == '201'
@@ -129,6 +130,6 @@ class RegistersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def register_params
-      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :username, :password)
+      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :username, :password, :country)
     end
 end
