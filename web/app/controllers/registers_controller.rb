@@ -8,6 +8,11 @@ class RegistersController < ApplicationController
   def index
     @register = Register.new
     @countries = RegistrationService.new.getCountries
+    @states = RegistrationService.new.getStates
+  end
+
+  def loadStates
+    @states = RegistrationService.new.getStatesByCountry(params['countryId'])
   end
 
   # GET /registers/1

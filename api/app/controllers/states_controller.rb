@@ -4,8 +4,12 @@ class StatesController < ApplicationController
   # GET /states
   def index
     @states = State.all
-
     render json: @states
+  end
+
+  def statesByCountry
+    @states = State.find_by_country_id(params['id'])
+    render json:@states
   end
 
   # GET /states/1
