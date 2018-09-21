@@ -9,6 +9,20 @@
 <% end %>
 <%= form_for(form_path) do |f| %>
 
+  <% if @apply.errors.any? %>
+    <div id="error_explanation">
+      <font color="red">
+      <h2><%= pluralize(@apply.errors.count, "error") %>:</h2>
+      </font>
+
+      <ul>
+        <% @apply.errors.full_messages.each do |msg| %>
+          <li><font color="red"><%= msg %></font></li>
+
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
     <div class="form-group row">
       <div class="col-md-6">

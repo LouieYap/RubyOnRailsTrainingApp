@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="358f1186-ea5f-4664-a7ad-758db1ea0b37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../web/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/../web/Gemfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/app/models/apply.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/test/models/apply_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/app/controllers/static_pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/controllers/static_pages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/app/views/login/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/login/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/app/views/registers/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/registers/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/app/views/static_pages/form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/static_pages/form.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
