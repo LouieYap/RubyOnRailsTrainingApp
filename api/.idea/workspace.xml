@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="358f1186-ea5f-4664-a7ad-758db1ea0b37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/states_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/states_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/.idea/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../web/.idea/web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/../web/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../web/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/assets/javascripts/login.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/assets/javascripts/people.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/assets/javascripts/registers.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/assets/javascripts/static_pages.coffee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/controllers/registers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/controllers/registers_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/services/registration_service.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/services/registration_service.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/views/registers/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/registers/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/views/registers/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/registers/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -125,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/states_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -363,24 +347,24 @@
       <workItem from="1537250993771" duration="5585000" />
       <workItem from="1537351821790" duration="610000" />
       <workItem from="1537420971967" duration="7466000" />
-      <workItem from="1537507042726" duration="6246000" />
+      <workItem from="1537507042726" duration="6850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36409000" />
+    <option name="totallyTimeSpent" value="37013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="1912" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22557841" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22557841" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32793522" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.19433199" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.19433199" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -400,17 +384,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/states_controller.rb</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/serializers/user_serializer.rb" />
@@ -549,8 +522,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/states_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
