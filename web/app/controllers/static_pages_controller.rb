@@ -7,9 +7,13 @@ class StaticPagesController < ApplicationController
   end
 
   def form
+    @apply = Apply.new
   end
 
   def form_submit
+    @apply = Apply.new(apply_params)
+
+    if @apply.valid?
     response = self.class.post('http://localhost:3001/form',
                                :body => {
                                    :full_name => params['/form']['full_name'],
@@ -24,7 +28,8 @@ class StaticPagesController < ApplicationController
       flash[:danger] = 'Error Occurred'
 
     end
-    redirect_to form_path
+    end
+    render "static_pages/form"
   end
 
 
@@ -34,5 +39,8 @@ class StaticPagesController < ApplicationController
     redirect_to login_path
   end
 
+  def apply_params
+    params.require('/form').permit(:full_name, :email_address, :blood_type, :gender)
+  end
   before_action :check_login_session, :only => [:home, :help]
 end
