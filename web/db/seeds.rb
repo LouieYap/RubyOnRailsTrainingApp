@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+encryptor = EncryptPasswordService.new
+@password = encryptor.encrypt('admin', '123')
+User.create!(username: 'admin', password: @password, admin: true, person: Person.create(firstname: 'admin'))
