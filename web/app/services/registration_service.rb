@@ -38,7 +38,7 @@ class RegistrationService
   end
 
   def getStatesByCountry(countryId)
-    return states = self.class.get(@url + "/statesByCountry/" + countryId , :headers =>{'Content-Type' => 'application/json'})
+    return states = self.class.get(@url + "/states/statesByCountry/" + countryId , :headers =>{'Content-Type' => 'application/json'})
   end
 
 end

@@ -8,7 +8,7 @@ class StatesController < ApplicationController
   end
 
   def statesByCountry
-    @states = State.find_by_country_id(params['id'])
+    @states = State.where(:country_id => params['id'])
     render json:@states
   end
 

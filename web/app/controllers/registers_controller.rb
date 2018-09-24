@@ -13,6 +13,10 @@ class RegistersController < ApplicationController
 
   def loadStates
     @states = RegistrationService.new.getStatesByCountry(params['countryId'])
+    #response = {:data => @states, :status => 200};
+    #render json => response
+    render json:@states
+
   end
 
   # GET /registers/1

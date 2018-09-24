@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'login#create'
   delete '/logout',  to: 'login#destroy'
   resources :registers
-  get 'registers/loadStates/:countryId', to: 'registers#loadStates/'
+  get 'registers/loadStates/:countryId', to: 'registers#loadStates'
   get '/home', to: 'static_pages#home'
   get '/help', to: 'static_pages#help'
   get '/form', to: 'static_pages#form'

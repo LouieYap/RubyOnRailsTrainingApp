@@ -15,8 +15,18 @@ $(document).ready(function() {
         })
         */
 
-        $.get('/registers/loadStates', {countryId: this.value}, function (data) {
-            alert(data);
+        $.ajax({
+            type:'GET',
+            url: '/registers/loadStates/2',
+            //data: {countryId: this.value},
+            success: function(data){
+                alert('success' + data.responseText);
+            },
+            error: function(data){
+                alert('error' + data.responseText);
+            },
+            dataType: 'json'
+
         });
         
     })
