@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+  helper_method :admin_logged_in?
   def check_login_session
     if session[:user_id]
       return true
