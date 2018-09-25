@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="358f1186-ea5f-4664-a7ad-758db1ea0b37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/registers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/registers_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../web/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/app/assets/javascripts/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/assets/javascripts/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/app/controllers/registers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/controllers/registers_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/models/register.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/models/register.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/app/services/registration_service.rb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/services/registration_service.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/app/views/registers/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/views/registers/_form.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -111,8 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/registers_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="283">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -391,12 +387,12 @@
       <workItem from="1537507042726" duration="6852000" />
       <workItem from="1537766959845" duration="7662000" />
       <workItem from="1537851715783" duration="2482000" />
-      <workItem from="1537864946076" duration="5284000" />
+      <workItem from="1537864946076" duration="5984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52443000" />
+    <option name="totallyTimeSpent" value="53143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
@@ -622,8 +618,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/registers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="283">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
