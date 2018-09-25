@@ -26,5 +26,9 @@ $(document).ready(function() {
             $('#register_state').attr('disabled', 'disabled');
         }
         
-    })
-})
+    });
+
+    $('#register_date_of_birth').datepicker();
+});
+
+

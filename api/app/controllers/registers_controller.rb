@@ -14,6 +14,7 @@ class RegistersController < ApplicationController
     person.lastname = register_params['lastname']
     person.middlename = register_params['middlename']
     person.age = register_params['age']
+    person.date_of_birth = register_params['date_of_birth']
     person.country_id = register_params['country']
     person.state_id = register_params['state']
 
@@ -38,6 +39,6 @@ class RegistersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def register_params
-      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :username, :password, :country, :state)
+      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :date_of_birth, :username, :password, :country, :state)
     end
 end
