@@ -3,6 +3,7 @@ class LoginController < ApplicationController
   include HTTParty
 
   def new
+    session[:user_id] = nil
   end
 
   def create
