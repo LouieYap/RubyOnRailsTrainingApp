@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_14_092416) do
+ActiveRecord::Schema.define(version: 2018_09_25_100640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "people", force: :cascade do |t|
     t.string "firstname"
@@ -23,6 +30,17 @@ ActiveRecord::Schema.define(version: 2018_09_14_092416) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "country_id"
+    t.integer "state_id"
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.bigint "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_states_on_country_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,6 +50,8 @@ ActiveRecord::Schema.define(version: 2018_09_14_092416) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "api_key"
+    t.boolean "admin", default: false
   end
 
+  add_foreign_key "states", "countries"
 end
