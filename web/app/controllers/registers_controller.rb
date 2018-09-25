@@ -13,10 +13,7 @@ class RegistersController < ApplicationController
 
   def loadStates
     @states = RegistrationService.new.getStatesByCountry(params['countryId'])
-    #response = {:data => @states, :status => 200};
-    #render json => response
-    render json:@states
-
+    render json: @states.body
   end
 
   # GET /registers/1
@@ -33,6 +30,8 @@ class RegistersController < ApplicationController
                                            username:register_params['username'],
                                            password:register_params['password'],
                                            age:register_params['age'],
+                                           countryId:register_params['country_id'],
+                                           stateId:register_params['state_id']
                                        })
 
     respond_to do |format|
@@ -139,6 +138,6 @@ class RegistersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def register_params
-      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :username, :password, :country)
+      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :username, :password, :country, :state)
     end
 end

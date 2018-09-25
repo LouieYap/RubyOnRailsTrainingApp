@@ -32,7 +32,15 @@ class Register
   end
   def country=(country)
     @country = country
+    end
+=begin
+  def state
   end
+  def state(state)
+    @state = state
+  end
+=end
+
   def username
   end
   def username=(username)

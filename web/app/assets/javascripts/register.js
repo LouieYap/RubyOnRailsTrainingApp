@@ -1,32 +1,22 @@
 $(document).ready(function() {
-    $('select').on('change', function () {
-        /*
-        $.ajax({
-            type: 'GET',
-            xhrFields: {
-                withCredentials: true
-            },
-            dataType: 'json',
-            url: '/registers/loadStates',
-            data: {id:this.value},
-            success: function(response){
-                alert(response);
-            }
-        })
-        */
+    //var prompt = $(this).has('option[value=]').size() ? $(this).find('option[value=]') : $('<option value=\"\">').text('Select a state');
 
+    $('select').on('change', function () {
         $.ajax({
             type:'GET',
-            url: '/registers/loadStates/2',
-            //data: {countryId: this.value},
+            url: '/registers/loadStates/' + this.value,
+            data: $(this).serialize(),
             success: function(data){
-                alert('success' + data.responseText);
+                $('#register_state').empty();//.append(prompt);
+                $.each(data, function (i, state) {
+                    $('#register_state').append($('<option>').attr('value', state['country_id']).text(state['name']));
+                    $('#register_state').attr('disabled', false);
+                });
             },
             error: function(data){
                 alert('error' + data.responseText);
             },
             dataType: 'json'
-
         });
         
     })
