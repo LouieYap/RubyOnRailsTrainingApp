@@ -12,6 +12,7 @@ class RegistrationService
     lastname = params[:lastname]
     middlename = params[:middlename]
     age = params[:age]
+    date_of_birth = params[:date_of_birth]
     username = params[:username]
     password = params[:password]
     country = params[:country]
@@ -26,6 +27,7 @@ class RegistrationService
                                    :lastname => lastname,
                                    :middlename => middlename,
                                    :age => age,
+                                   :date_of_birth => date_of_birth,
                                    :country => country,
                                    :state => state
                                }.to_json,

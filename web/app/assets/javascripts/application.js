@@ -16,3 +16,5 @@
 //= require turbolinks
 //= require register
 //= require_tree .
+//= require bootstrap-datepicker
+

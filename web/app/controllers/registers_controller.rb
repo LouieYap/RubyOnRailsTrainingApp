@@ -31,6 +31,7 @@ class RegistersController < ApplicationController
                                            username:register_params['username'],
                                            password:register_params['password'],
                                            age:register_params['age'],
+                                           date_of_birth:register_params['date_of_birth'],
                                            country:register_params['country'],
                                            state:register_params['state']
                                        })
@@ -139,6 +140,6 @@ class RegistersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def register_params
-      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :username, :password, :country, :state)
+      params.require(:register).permit(:firstname, :lastname, :middlename, :age, :date_of_birth, :username, :password, :country, :state)
     end
 end
