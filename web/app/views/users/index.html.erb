@@ -1,0 +1,16 @@
+<div class="page-header"><h1>All Users</h1></div>
+<% flash.each do |key, message| %>
+  <div class="alert alert-<%= key %>">
+    <%= message %>
+  </div>
+<% end %>
+<% @users.each do |user| %>
+  <div class="card w-75">
+    <div class="card-body">
+      <h3 class="card-title"><%=user.username%></h3>
+      <%= link_to 'Edit', edit_user_path(user), class: "btn btn-primary" %>
+      <%= link_to 'Destroy', user, method: :delete, class: "btn btn-danger" %>
+    </div>
+  </div>
+
+<% end %>

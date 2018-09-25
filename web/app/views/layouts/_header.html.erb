@@ -7,8 +7,11 @@
     <%else %>
       <span class="navbar-brand"><%= link_to "Help", "#{help_path}" %></span>
       <span class="navbar-brand"><%= link_to "Apply", "#{form_path}" %></span>
+    <% if admin_logged_in? %>
+      <span class="navbar-brand"><%= link_to "Users", controller: 'users', action: 'index' %></span>
+    <% end %>
       <span class="navbar-brand">
-        <%= link_to 'logout', :controller => :static_pages, action: :logout %>
+        <%= link_to 'Logout', :controller => :static_pages, action: :logout %>
     </span>
     <% end %>
 </nav>
