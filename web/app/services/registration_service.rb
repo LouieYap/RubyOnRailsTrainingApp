@@ -14,6 +14,8 @@ class RegistrationService
     age = params[:age]
     username = params[:username]
     password = params[:password]
+    country = params[:country]
+    state = params[:state]
 
     encryptor = EncryptPasswordService.new
     return response = self.class.post(@url + '/registers',
@@ -23,7 +25,9 @@ class RegistrationService
                                    :firstname => firstname,
                                    :lastname => lastname,
                                    :middlename => middlename,
-                                   :age => age
+                                   :age => age,
+                                   :country => country,
+                                   :state => state
                                }.to_json,
                                :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json'} )
 

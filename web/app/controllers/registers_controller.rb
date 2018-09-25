@@ -30,8 +30,8 @@ class RegistersController < ApplicationController
                                            username:register_params['username'],
                                            password:register_params['password'],
                                            age:register_params['age'],
-                                           countryId:register_params['country_id'],
-                                           stateId:register_params['state_id']
+                                           country:register_params['country'],
+                                           state:register_params['state']
                                        })
 
     respond_to do |format|
