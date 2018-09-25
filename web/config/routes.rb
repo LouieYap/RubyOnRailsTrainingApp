@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   resources :people
+  resources :registers
+  resources :users
   get    '/login',   to: 'login#new'
   root 'login#new'
   post   '/login',   to: 'login#create'
   delete '/logout',  to: 'login#destroy'
-  resources :registers
   get 'registers/loadStates/:countryId', to: 'registers#loadStates'
   get '/home', to: 'static_pages#home'
   get '/help', to: 'static_pages#help'
