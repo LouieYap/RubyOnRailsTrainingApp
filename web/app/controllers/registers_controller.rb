@@ -8,7 +8,8 @@ class RegistersController < ApplicationController
   def index
     @register = Register.new
     @countries = RegistrationService.new.getCountries
-    @states = RegistrationService.new.getStates
+    #@states = RegistrationService.new.getStates
+    @states = []
   end
 
   def loadStates
