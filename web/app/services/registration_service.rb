@@ -7,7 +7,7 @@ class RegistrationService
   end
 
   def register(params)
-
+    # test commit
     firstname = params[:firstname]
     lastname = params[:lastname]
     middlename = params[:middlename]
